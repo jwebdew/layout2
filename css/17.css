@@ -1,0 +1,91 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    color: #333;
+}
+.item {
+    width: 450px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+.item figure {
+    width: 100%;
+    height: 100%;
+}
+.item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item div { 
+    opacity: 0;/* 숨김 */
+    transition: 0.7s;
+    position: absolute;
+    top: 50%;
+    /* 부모인 position:relative가 가진
+    값에서 이동 */
+    left: 0;
+    transform: translate(0, -50%);
+    /* 변형 : 이동(x축, y축) 
+    => 본인이 가진 값으로 이동 */
+    text-align: center;
+}
+.item::before {
+    transition: 0.7s;
+    opacity: 0; /* 숨김 */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.589);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+.item div a {
+    width: 120px;
+    height: 40px;
+    background-color: #fbff12;
+    display: block;
+    margin: 20px auto;
+    line-height: 40px;
+    /* 
+    가로 120px
+    세로 40px
+    배경색, 글자색
+    가운데 배치
+    글자수직가운데배치
+    */
+}
+.item:hover div {
+    opacity: 1;
+}
+.item:hover::before {
+    opacity: 1;
+} 
+
+.item div h4 {
+    position: relative;
+    display: inline-block;
+    padding: 0 7px;
+}
+.item div h4::before {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background-color: #fbff12;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}

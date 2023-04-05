@@ -1,0 +1,140 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+body {
+    color: #333;
+    background: url('../img/bg-01.jpg') center center / cover no-repeat;
+    /* 배경이미지 경로 x축위치 y축위치 / 사이즈 이미지반복 */
+}
+.wrap {
+    width: 1600px;
+    background-color: antiquewhite;
+    margin: 100px auto;    
+}
+header {
+    height: 100px;
+    line-height: 100px;
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+header .right_menu li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* .main_visual */
+.main_visual {
+    width: 1440px;
+    height: 700px;
+    margin: 0 auto;
+    /* 
+    가로 : 1440px
+    세로 : 700px
+    가로영역 가운데 배치 */
+    position: relative;
+}
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 이미지 사이즈 맞추기 */
+}
+.main_visual div {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    color: #fff;
+    text-align: center;
+    /* 메인이미지위로 올리고 
+    수직가운데 배치하기 
+    
+    => position:absolute사용
+    transform:translate사용
+    17.css참고*/
+}
+.main_visual div h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.main_visual div::before {
+    content: '';
+    width: 1px;
+    height: 70px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -120px;
+}
+.main_visual div::after {
+    content: '';
+    width: 1px;
+    height: 70px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -120px;
+}
+
+/* .cont01 */
+.cont01 {
+    width: 1440px;
+    margin: 100px auto;
+}
+.cont01 h3 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.cont01 .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 .list .item {
+    position: relative;
+    width: 460px;
+    height: 560px;
+    /* 
+    가로값 : 460px    
+    세로값 : 560px*/
+}
+.cont01 .list .item figure {
+    /* 크기맞추기 */
+    width: 100%;
+    height: 100%;
+}
+.cont01 .list .item figure img {
+/* 이미지 크기, 비율맞추기*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .list .item div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 50px;
+    box-sizing: border-box;
+}
+footer {
+    line-height: 70px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}

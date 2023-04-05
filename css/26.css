@@ -1,0 +1,121 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    color: #333;
+}
+
+/* .main_visual */
+.main_visual {
+    width: calc(100% - 100px);
+    height: 700px;    
+    margin: 50px auto;
+}
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .cont01 */
+.cont01 {
+    width: calc(100% - 100px);
+    margin: 100px auto;
+}
+.cont01 .title {
+    margin-bottom: 40px;
+}
+.cont01 .title h3 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.cont01 .title p {
+    font-size: 20px;
+}
+.cont01 ul {
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 ul li {
+    width: calc(100% / 10 - 20px);
+    /* height: 207px; */
+    height: calc((100vw - 100px) / 10 - 20px);
+    /* vw => 
+    브라우저의 너비에 따라 값이 달라짐 */
+
+    background-color: #fff048;
+    border-radius: 50%;
+    text-align: center;
+   /*  line-height: 207px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .cont02 */
+.cont02 {
+    padding: 100px 0;
+    background: url(../img/bg-06.jpg) center center / cover no-repeat;
+    background-attachment: fixed;    
+}
+.cont02 .inner {
+    width: 1440px;
+    margin: 0 auto;
+}
+.cont02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont02 .inner .list .item {
+    transition: 0.7s;
+    width: calc(100% / 5 - 20px);
+    /* 100%에서 5등분하고, 
+    -20px이 빠진값 */
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    /* width값에 padding이 
+    포함되도록 설정 */
+}
+.cont02 .inner .list .item figure {
+    height: 300px;
+    /* 높이300px */
+    position: relative;
+}
+.cont02 .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont02 .inner .list .item figure img.off {
+    display: none;
+}
+.cont02 .inner .list .item:hover {
+    transform: translateY(-20px);
+    
+}
+.cont02 .inner .list .item:hover figure img.off {
+    display: block;
+}
+.cont02 .inner .list .item:hover figure img.on {
+    display: none;
+}
+.cont02 .inner .list .item figure p {
+    height: 30px;
+    padding: 0 10px;
+    background-color: #0000008b;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 30px;
+}
